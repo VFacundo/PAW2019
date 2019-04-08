@@ -7,6 +7,6 @@ navegador los datos enviados por el navegador en los dos ejercicios anteriores. 
   La diferencia es que en el caso del ejercicio 4 se realiza otro request al servidor(localhost) por la imagen  , la cual se realiza con el metodo GET.
 
   Request:  
-  ![requestEjer5](requestEjer5.png "requestEjer5")
+  ![Imagen Request](ejer5.png "requestEjer5")
 
   Ejecutar formulario.html
