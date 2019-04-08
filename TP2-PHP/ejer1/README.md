@@ -25,9 +25,9 @@ Datos que se validaron:
   Telefono: en HTML campo del tipo tel, obligatorio y un max de 12 caracteres (codigo de pais+codigo de area sin 0+nro sin 15), en PHP solo numeros del 0-9.  
   Edad: en HTML campo del tipo entero, min 1 y max 100, en PHP min 1, max 100 y que sean solo numeros.  
   Talla Calzado: en HTML campo del tipo entero, min 20 y max 45, en PHP min 20, max 45 y que solo sean numeros.  
-  Altura: en HTML maximo y minimo, en PHP maximo, minimo y que sea enteros.
+  Altura: en HTML maximo y minimo, en PHP maximo, minimo y que sea enteros.  
   Fecha Nacimiento: en HTML campo date, maximo, minimo y que sea obligatorio, en PHP que sea una fecha correcta y que no sea mayor a la fecha actual.  
-  Color de Pelo: en PHP que lo que se recibio sea una de las opciones disponibles.
+  Color de Pelo: en PHP que lo que se recibio sea una de las opciones disponibles.  
   Fecha del Turno: en HTML campo date, maximo, minimo y que sea obligatorio, en PHP que sea una fecha correcta y que no sea menor a la fecha actual.  
   Horario del Turno: en HTML campo del tipo time, minimo, maximo y el salto (15min), lo mismo en PHP.  
 
