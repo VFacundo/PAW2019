@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h1>Datos</h1>
+    <form class="" action="cargarTurno.php" method="post">
+      <label>Nombre: <input type="text" name="firstname" value="" required/></label><br>
+      <label>E-Mail: <input type="email" name="email" value="" required/></label><br>
+      <label>Telefono: <input type="tel" name="tel" placeholder="542346454545" maxlength="12" required/></label><br>
+      <label>Edad: <input type="number" name="edad" min="1" max="100"/></label><br>
+      <label>Talla Calzado: <input type="number" name="calzado" value="" min="20" max="45"/></label><br>
+      <label>Altura: <input type="range" name="altura" id="altura" min="100" max="230" oninput="alturaOut.value = altura.value"/></label>
+      <output name="alturaOut" id="alturaOut">160</output>cm<br>
+      <label>Fecha de Nacimiento: <input type="date" name="fechaNac" min="1919-01-01" max="2019-12-12" required/></label><br>
+      <label>Color de Pelo:
+      <select name="colorPelo">
+        <option value="negro">Negro</option>
+        <option value="castanio">Castaño</option>
+        <option value="rubio">Rubio</option>
+        <option value="pelirrojo">Pelirrojo</option>
+      </select></label><br>
+      <label>Fecha de Turno: <input type="date" name="fechaTurno" min="2019-01-01" max="2020-12-12" required/></label><br>
+      <label>Horario de Turno: <input type="time" name="hturno" id="appt" min="08:00" max="17:00" step="900" required/></label><br>
+
+      <input type="submit" name="enviar" value="Submit">
+      <input type="reset" name="borrar" value="Clear">
+    </form>
+
+  </body>
+</html>

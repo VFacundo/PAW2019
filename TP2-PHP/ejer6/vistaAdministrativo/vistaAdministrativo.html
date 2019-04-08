@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vista Administrativo</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../formulario.html">Formulario</a>
+    </nav>
+    <table border="1" cellspacing=0>
+      <caption>Tabla de Turnos</caption>
+        <thead>
+          <tr>
+            <th>Fecha del Turno</th>
+            <th>Hora del Turno</th>
+            <th>Nombre del Paciente</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Ficha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php cargaTabla(); ?>
+        </tbody>
+    </table>
+  </body>
+</html>

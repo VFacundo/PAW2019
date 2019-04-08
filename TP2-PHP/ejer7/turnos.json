@@ -1,0 +1,36 @@
+[
+    {
+        "nroTurno": 0,
+        "firstname": "Juan Perez",
+        "email": "jperez@hotmail.com",
+        "tel": "546767676767",
+        "edad": "53",
+        "calzado": "45",
+        "altura": "195",
+        "fechaNac": "07\/12\/1990",
+        "colorPelo": "negro",
+        "fechaTurno": "24\/04\/2019",
+        "hturno": [
+            "08",
+            "30"
+        ],
+        "imgTurno": "img\/paw.png"
+    },
+    {
+        "nroTurno": 1,
+        "firstname": "Martin Diaz",
+        "email": "mdiaz@hotmail.com",
+        "tel": "546767676799",
+        "edad": "57",
+        "calzado": "42",
+        "altura": "195",
+        "fechaNac": "01\/04\/2019",
+        "colorPelo": "negro",
+        "fechaTurno": "30\/04\/2019",
+        "hturno": [
+            "13",
+            "30"
+        ],
+        "imgTurno": "No se cargo Imagen"
+    }
+]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vista Ficha</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../vistaAdministrativo/cargaTablaAdmin.php">Tabla De Turnos</a>
+    </nav>
+    <h1>Vista de Ficha</h1>
+    <p>Ingrese el ID de ficha a buscar (mayor a 0):</p>
+    <form class="" action="cargarFicha.php" method="get">
+      <label>Id Turno: <input type="number" name="buscarId" min="0" required/></label>
+      <input type="submit" name="buscar" value="Buscar">
+    </form><br>
+    <table border="1" cellspacing=0>
+      <?php cargaTabla(); ?>
+    </table>
+  </body>
+</html>
