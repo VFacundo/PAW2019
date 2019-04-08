@@ -16,6 +16,6 @@ con el mismo nombre?
   }  
 ~~~
 
-    Para el ejercicio se validaron que sea un formato valido(.jpg .png), que sea una imagen y que no exista otra con el  mismo nombre. 
+Para el ejercicio se validaron que sea un formato valido(.jpg .png), que sea una imagen y que no exista otra con el  mismo nombre. 
 
   Ejecutar formulario.html
