@@ -8,6 +8,5 @@
     <h1>Sistema de Turnos</h1>
     <a href=<?= $carga ?>>Cargar Un Formulario</a>
     <a href=<?= $admin ?>>Vista Administracion</a>
-    <a href=#>Vista nose que Era</a>
   </body>
 </html>
