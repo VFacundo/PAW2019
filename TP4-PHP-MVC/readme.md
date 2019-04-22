@@ -1,5 +1,23 @@
 # TP4-PHP-MVC
 
+~~~
+Para ejecutar el ejercicio debe configurarse el archivo /modelos/dbparameters.json , ingresando un nombre de usuario
+y contraseña validos ademas del nombre de una base de datos previamente creada.
+El usuario debe contar con los permisos suficientes para crear una tabla dentro de la base de datos (tabla turnos),
+la cual se crea automaticamente.
+
+    //dbparameters.json//
+    [
+      {
+          "host": "localhost",
+          "dbname":"Nombre bd",
+          "user": "nombre de usuario",
+          "pass": "contraseña"
+      }
+    ]
+
+~~~
+
 1. __Instale el Sistema Gestor de Bases de Datos MySQL y las extensiones necesarias para poder
 interactuar con la misma desde PHP. Documente brevemente los pasos realizados y como verificó
 que el driver se instaló correctamente (vía phpinfo y vía un script de prueba).__
@@ -16,7 +34,7 @@ En la seccion configuracion encontramos.
                 pueden utilizar el controlador nativo para comunicarse con el servidor MySQL.
 
 Script de Prueba:
-  Se adjunta el Script prueba.php , el cual intenta una conexion en primer lugar con Mysqli y luego con PDO_Mysql.
+  Se adjunta el Script de prueba , el cual intenta una conexion en primer lugar con Mysqli y luego con PDO_Mysql.
 ~~~
 
 2. __Genere un objeto que construya y gestione la conexión a la base de datos. El objeto debe permitir
