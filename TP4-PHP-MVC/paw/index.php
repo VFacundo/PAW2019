@@ -34,24 +34,3 @@ if(!is_null($rutaPorDefecto)){
 }
 
 $despachador->desapchar($_SERVER);
-
-/*
-CREATE TABLE turnos(
-    id int AUTO_INCREMENT,
-	nombre varchar(25) NOT NULL,
-    email varchar(25) NOT NULL,
-    tel varchar(12) NOT NULL,
-    edad int,
-    calzado int,
-    altura int,
-    fechaNac date NOT NULL,
-    colorPelo char(15),
-    fechaTurno date NOT NULL,
-    hturno time,
-    diagnostico varchar(25),
-    PRIMARY KEY(id)
-)
-ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
-AUTO_INCREMENT = 1
-
-*/
