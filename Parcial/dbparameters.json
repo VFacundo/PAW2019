@@ -1,0 +1,8 @@
+[
+  {
+      "host": "localhost",
+      "dbname":"dbalumnos",
+      "user": "user",
+      "pass": "user"
+  }
+]
