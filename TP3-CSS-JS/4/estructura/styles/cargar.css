@@ -1,0 +1,13 @@
+@import url(reset.css);
+textarea{
+  height: 70vh;
+  width: 50vh;
+}
+form{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 80vh;
+  height: 80vh;
+}
