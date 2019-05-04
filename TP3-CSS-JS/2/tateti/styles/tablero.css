@@ -1,0 +1,88 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Artifika');
+body{
+  background-color: rgb(185,255,174);
+  font-family: 'Artifika', serif;
+}
+section{
+  width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+}
+.encabezado{
+  display: inline-block;
+   width: auto;
+   margin: auto;
+}
+.back{
+  float: left;
+  position: absolute;
+  margin-left: 15vh;
+  font-size: 4em;
+}
+.turnos{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  padding: 0 1.5vh;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover{
+  background-color: red;
+}
+
+#contenedorJuego .tableroTateti{
+  width: 70vh;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+}
+
+#tableroTateti3{
+  grid-template-columns: auto auto auto;
+}
+#tableroTateti4{
+  grid-template-columns: auto auto auto auto;
+}
+#tableroTateti5{
+  grid-template-columns: auto auto auto auto auto;
+}
+#tableroTateti6{
+  grid-template-columns: auto auto auto auto auto auto;
+}
+#contenedorJuego .tableroTateti div{
+  width: auto;
+  height: auto;
+  box-shadow: 4px 4px 10px #666;
+  border: 0.1vh solid black;
+  position: relative;
+}
+#contenedorJuego .tableroTateti .casilla{
+  background-color: rgb(255,99,71);
+}
+.jugador1::after{
+  content: 'x';
+}
+.jugador2::after{
+  content: 'o';
+}
+::after{
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+  font-size: 5em;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);;
+}
+#contenedorJuego .tableroTateti .casilla:hover{
+  color: #3a7999;
+	box-shadow: inset 0 0 0 3px #3a7999;
+}

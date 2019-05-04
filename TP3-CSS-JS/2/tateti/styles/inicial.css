@@ -1,0 +1,19 @@
+@import url(reset.css);
+
+body{
+background-color: rgb(185,255,174);
+}
+
+form{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30vh;
+  width: 35vh;
+  border: black 1px solid;
+  border-radius: 6px;
+}
+
+input{
+  margin: 1vh;
+}

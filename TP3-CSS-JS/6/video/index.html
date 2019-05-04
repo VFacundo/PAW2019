@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+  <html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <title>Reproductor de Video</title>
+     <link rel="stylesheet" href="styles/style.css">
+     <script src="js/reproductor.js"></script>
+     <script> Reproductor.iniciar(); </script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  <h1>PlayList Video</h1>
+  <div class="contenedor">
+  <section id="video">
+          <video id="reproductor" controls preload="auto" autoplay> </video>
+          <label id="titulo"></label>
+  </section>
+  <section id="lista">
+    <h2>Playlist</h2>
+      <ul id="playlist">
+      </ul>
+  </section>
+</div>
+  </body>
+  </html>

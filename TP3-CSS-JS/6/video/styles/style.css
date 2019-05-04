@@ -1,0 +1,29 @@
+@import url(reset.css);
+
+.contenedor{
+  margin: auto;
+  margin-top: 5vh;
+  width: 200vh;
+  height: 90vh;
+}
+
+#video{
+  width: 150vh;
+  height: 90vh;
+  float: left;
+  text-align: center;
+}
+
+#titulo::before{
+  content: 'Actual: ';
+}
+
+#lista{
+  width: 50vh;
+  height: 90vh;
+  float: left;
+}
+
+#reproductor{
+width: 150vh;
+}

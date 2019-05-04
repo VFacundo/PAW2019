@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TaTeTi</title>
+    <link rel="stylesheet" href="styles/inicial.css">
+    <script src="js/iniciar.js"></script>
+    <script> Iniciar.iniciarJuego(); </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <form id="form" method="post">
+      <label><input type="text" id="jugador1" placeholder="Jugador 1" required></label><br>
+      <label><input type="text" id="jugador2" placeholder="Jugador 2" required></label><br>
+      <label>Dificultad : <select id="dificultad" required>
+        <option value="3">3X3</option>
+        <option value="4">4X4</option>
+        <option value="5">5X5</option>
+        <option value="6">6X6</option>
+      </select></label><br>
+      <input type="submit" name="iniciar" id="iniciar" value="Iniciar!"></button>
+      <input type="reset" name="borrar" value="Borrar"></button>
+    </form>
+  </body>
+</html>
