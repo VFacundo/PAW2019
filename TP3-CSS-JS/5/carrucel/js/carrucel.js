@@ -18,10 +18,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 Carrucel.init = function (contenedor) {
   Carrucel.container = document.getElementById(contenedor);
   Carrucel.crearEstructura();
-  Carrucel.estadoElemento = document.querySelector('#estado');
-  Carrucel.cargar();   
-  
-  Carrucel.autoSlide();  
+  Carrucel.estadoElemento = document.querySelector('#estado').children[0];
+  Carrucel.cargar();
+  Carrucel.autoSlide();
 }
 
 Carrucel.reinit = function (){
@@ -38,38 +37,32 @@ Carrucel.reinit = function (){
 Carrucel.autoSlide = function(){
   var ul = document.getElementById("contenedorImg"), interval,reInterval;
   interval = setInterval(() => {
-    if(Carrucel.imgActiva < Carrucel.cantImg){
+    if(Carrucel.imgActiva < Carrucel.cantImg-1){
       ul.children[Carrucel.imgActiva].classList.remove("activa");
       Carrucel.imgActiva++;
       ul.children[Carrucel.imgActiva].classList.add("activa");
     }else{
+      ul.children[Carrucel.imgActiva].classList.remove("activa");
       Carrucel.imgActiva = 0;
+      ul.children[Carrucel.imgActiva].classList.add("activa");
     }
     if(Carrucel.estadoSlide != "auto"){
       clearInterval(interval)
     }
   }, Carrucel.timeOut);
-
-  setTimeout(function(){
-      if(Carrucel.estadoSlide != "auto"){
-        Carrucel.estadoSlide = "auto";
-        Carrucel.autoSlide();
-      }
-    }, 3000);
-  
 }
+
 
 Carrucel.crearEstructura = function(){
   var divImgContainer = document.createElement("div"),
-      divEstado = document.createElement("div");
-      progreso = document.createElement("progreso")
+      divEstado = document.createElement("div"),
+      span = document.createElement("span");
+
   divImgContainer.setAttribute("id","contenedor");
   divEstado.setAttribute("id","estado");
-  progreso.setAttribute("max",Carrucel.cantImg);
-  progreso.setAttribute("value",Carrucel.cantImgCargadas);
+    divEstado.appendChild(span);
   Carrucel.container.appendChild(divImgContainer);
   Carrucel.container.appendChild(divEstado);
-  Carrucel.container.appendChild(progreso);
 }
 
 
@@ -109,11 +102,17 @@ Carrucel.cargar = function() {
 
 Carrucel.cargarContenedorImg = function() {
   var fragment = document.createDocumentFragment(),
-      ul = document.createElement("ul");
+      ul = document.createElement("ul"),item,
+      spanDot,
+      contentDot = document.getElementById("contentDot");
+
   ul.setAttribute("id","contenedorImg");
   for ( var i = 0; i < Carrucel.cantImg; i++ ) {
-    var item = Carrucel.cargarImg(i);
+    item = Carrucel.cargarImg(i);
     ul.appendChild(item);
+    spanDot = document.createElement("span");
+    spanDot.classList.add("dot");
+    contentDot.appendChild(spanDot);
   }
   fragment.appendChild(ul);
   return fragment;
@@ -123,12 +122,12 @@ Carrucel.cargarContenedorImg = function() {
 Carrucel.cargarImg = function(i) {
   var item = document.createElement('li'),
       img = document.createElement('img');
-  
+
   img.onload = function (){
     Carrucel.cantImgCargadas ++;
     Carrucel.estadoElemento.innerHTML = "Cargando "+Carrucel.cantImgCargadas+"/"+Carrucel.cantImg;
     if(Carrucel.cantImgCargadas == Carrucel.cantImg){
-      Carrucel.estadoElemento.remove();
+      Carrucel.estadoElemento.parentElement.remove();
     }
   };
   img.src = Carrucel.imagenes[i]["src"];
