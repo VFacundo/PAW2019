@@ -1,0 +1,20 @@
+{
+"titulo": "Título del Test",
+"preguntas": [{
+"pregunta": "Pregunta 1",
+"respuestas": ["respuesta A", "respuesta B", "respuesta C", "respuesta D"],
+"correctas": [0, 3]
+},
+{
+"pregunta": "Pregunta 2",
+"respuestas": ["respuesta A", "respuesta B", "respuesta C", "respuesta D"],
+"correctas": [0, 3]
+},
+{
+"pregunta": "Pregunta 3",
+"respuestas": ["respuesta A", "respuesta B", "respuesta C", "respuesta D"],
+"correctas": [0, 3]
+}],
+"cantidadAPreguntar": 2,
+"tiempoDeTrabajo": 10
+}
