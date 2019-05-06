@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/confs.js"></script>
+  <script src="js/buscaminas.js"></script>
+  <script>
+    Juego.init("canvas");
+  </script>
+</head>
+
+<body>
+  <h1>Buscaminas</h1>
+  <section>
+    <span>Dificultad</span>
+    <select id="dificultad">
+      <option value="facil">Facil</option>
+      <option value="media">Media</option>
+      <option value="dificil">Dificil</option>
+    </select>
+    <button onclick="Juego.cambiarDificultad()">Cambiar</button>
+  </section>
+  <div id="canvas"></div>
+</body>
+
+</html>

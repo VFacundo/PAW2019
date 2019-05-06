@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criptograma</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/confs.js"></script>
+  <script src="js/criptograma.js"></script>
+  <script>
+    Juego.init("canvas");
+  </script>
+</head>
+
+<body>
+  <h1>Criptograma</h1>
+  <section>
+    <span>Representacion</span>
+    <select id="representacion">
+      <option value="numeros">Numeros</option>
+      <option value="letras">Letras</option>
+      <option value="dibujos">Dibujos</option>
+    </select>
+    <button onclick="Juego.cambiarRepresentacion()">Cambiar</button>
+  </section>
+  <div id="canvas">
+   
+  </div>
+</body>
+
+</html>
