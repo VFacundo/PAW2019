@@ -17,6 +17,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 Carrucel.init = function (contenedor) {
   Carrucel.container = document.getElementById(contenedor);
+  document.getElementById("next").addEventListener("click",function(){
+    var ul = document.getElementById("contenedorImg")
+    ul.children[Carrucel.imgActiva].classList.remove("activa");
+    Carrucel.imgActiva++;
+    if(Carrucel.imgActiva < Carrucel.cantImg-1){
+      ul.children[Carrucel.imgActiva].classList.add("activa");
+    }else {
+      Carrucel.imgActiva = 0;
+      ul.children[Carrucel.imgActiva].classList.add("activa");
+    }
+  });
+  document.getElementById("back").addEventListener("click",function(event){
+    var ul = document.getElementById("contenedorImg")
+    ul.children[Carrucel.imgActiva].classList.remove("activa");
+    Carrucel.imgActiva--;
+    if(Carrucel.imgActiva > 0){
+      ul.children[Carrucel.imgActiva].classList.add("activa");
+    }else {
+      Carrucel.imgActiva = Carrucel.cantImg-1;
+      ul.children[Carrucel.imgActiva].classList.add("activa");
+    }
+  });
   Carrucel.crearEstructura();
   Carrucel.estadoElemento = document.querySelector('#estado').children[0];
   Carrucel.cargar();
@@ -99,7 +121,6 @@ Carrucel.cargar = function() {
   Carrucel.imgActiva = 0;
 };
 
-
 Carrucel.cargarContenedorImg = function() {
   var fragment = document.createDocumentFragment(),
       ul = document.createElement("ul"),item,
@@ -112,12 +133,21 @@ Carrucel.cargarContenedorImg = function() {
     ul.appendChild(item);
     spanDot = document.createElement("span");
     spanDot.classList.add("dot");
+    spanDot.innerText = i;//Borrar Esto
+    spanDot.dataset.nroImg = i;
+    spanDot.addEventListener("click",Carrucel.pasarImgDot);
     contentDot.appendChild(spanDot);
   }
   fragment.appendChild(ul);
   return fragment;
 }
 
+Carrucel.pasarImgDot = function(){
+  var span = event.target, ul = document.getElementById("contenedorImg");
+  ul.children[Carrucel.imgActiva].classList.remove("activa");
+  Carrucel.imgActiva = span.dataset.nroImg;
+  ul.children[Carrucel.imgActiva].classList.add("activa");
+}
 // return an <li> with a <img> in it
 Carrucel.cargarImg = function(i) {
   var item = document.createElement('li'),
