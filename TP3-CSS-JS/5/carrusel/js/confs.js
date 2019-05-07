@@ -1,8 +1,8 @@
 var console = console || {},
-Carrucel = Carrucel || {};
+Carrusel = Carrusel || {};
 
 
-Carrucel.imagenes = [
+Carrusel.imagenes = [
   {
     src: "images/400 (1).jpg"
   },
