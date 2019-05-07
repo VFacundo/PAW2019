@@ -9,7 +9,8 @@ Carrusel.imgActiva,
 Carrusel.cantImgCargadas,
 Carrusel.cantImg = Carrusel.imagenes.length;
 Carrusel.timeOut = 4000;
-Carrusel.estadoSlide = "auto";
+Carrusel.estadoSlide = "auto",
+Carrusel.idIntervalo;
 
 document.addEventListener("DOMContentLoaded", function(event) {
   Carrusel.init("slide");
@@ -39,6 +40,7 @@ Carrusel.init = function (contenedor) {
       Carrusel.imgActiva = 0;
       ul.children[Carrusel.imgActiva].classList.add("activa");
     }
+    Carrusel.resetIntervalo();
   });///////////////////////EVENT NEXT//////////////////////
   /////////////////////EVENT BACK//////////////////////
     btnBack.addEventListener("click",function(){
@@ -51,11 +53,12 @@ Carrusel.init = function (contenedor) {
       Carrusel.imgActiva = Carrusel.cantImg-1;
       ul.children[Carrusel.imgActiva].classList.add("activa");
     }
+    Carrusel.resetIntervalo();
   });/////////////////////EVENT BACK//////////////////////
   Carrusel.crearEstructura();
   Carrusel.estadoElemento = document.querySelector('#estado').children[0];
   Carrusel.cargar();
-  Carrusel.autoSlide();
+  Carrusel.iniciarMov();
 }
 
 Carrusel.reinit = function (){
@@ -69,11 +72,21 @@ Carrusel.reinit = function (){
   Carrusel.estadoSlide == "parado";
 }
 
-Carrusel.autoSlide = function(){
+Carrusel.resetIntervalo = function(){
+  clearInterval(Carrusel.idIntervalo);//Detengo el Intervalo
+  Carrusel.idIntervalo = setInterval(Carrusel.Slide,Carrusel.timeOut);//Lo inicio "Reiniciado"
+}
+
+Carrusel.iniciarMov = function(){
+  Carrusel.idIntervalo = setInterval(Carrusel.Slide,Carrusel.timeOut);
+}
+
+Carrusel.Slide = function(){
   var ul = document.getElementById("contenedorImg"),reInterval;
-  interval = setInterval(() => {
     if(Carrusel.estadoSlide != "auto"){
-      clearInterval(interval)
+      clearInterval(Carrusel.idIntervalo);
+      f = new Date();
+      console.log(f.getSeconds());
     }
     if(Carrusel.imgActiva < Carrusel.cantImg-1){
       ul.children[Carrusel.imgActiva].classList.remove("activa");
@@ -84,9 +97,9 @@ Carrusel.autoSlide = function(){
       Carrusel.imgActiva = 0;
       ul.children[Carrusel.imgActiva].classList.add("activa");
     }
-  }, Carrusel.timeOut);
+    f = new Date();
+    console.log(f.getSeconds());
 }
-
 
 Carrusel.crearEstructura = function(){
   var divImgContainer = document.createElement("div"),
@@ -99,7 +112,6 @@ Carrusel.crearEstructura = function(){
   Carrusel.container.appendChild(divImgContainer);
   Carrusel.container.appendChild(divEstado);
 }
-
 
 Carrusel.cambiarRepresentacion = function(){
   var select = document.getElementById("representacion"), div, body;
@@ -160,6 +172,7 @@ Carrusel.pasarImgDot = function(){
   ul.children[Carrusel.imgActiva].classList.remove("activa");
   Carrusel.imgActiva = span.dataset.nroImg;
   ul.children[Carrusel.imgActiva].classList.add("activa");
+  Carrusel.resetIntervalo();
 }
 // return an <li> with a <img> in it
 Carrusel.cargarImg = function(i) {
@@ -174,6 +187,6 @@ Carrusel.cargarImg = function(i) {
     }
   };
   img.src = Carrusel.imagenes[i]["src"];
-  item.appendChild( img );
+  item.appendChild(img);
   return item;
 }
