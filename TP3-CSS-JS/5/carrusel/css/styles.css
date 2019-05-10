@@ -12,7 +12,18 @@ body{
   justify-content: start;
   z-index:1;
 }
-
+body > section {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: 15%;
+  min-width: 50vw;
+  text-align:center;
+}
+#representacion{
+  text-align-last:center;
+}
 h1{
   text-align:center;
   font-size:3em;
@@ -21,9 +32,9 @@ h1{
 
 #back,
 #next{
-  background-color: #00000069;
   transition: .5s ease-in-out;
   transition-property: all;
+  padding: 0.3em 0.1em 0.5em 0.1em;
 }
 
 #contentDot{
@@ -57,14 +68,15 @@ h1{
   position: absolute;
   font-size: 8em;
   top: 50%;
-  left: -5%;
+  left: 0;
   z-index: 10;
+  line-height: 0;
 }
 #back:hover {
-  left:0%;
+  background-color: #000000a6;
 }
 #next:hover{
-  right:0%;
+  background-color: #000000a6;
 }
 
 @keyframes zoom-fade-in {
@@ -169,13 +181,15 @@ li:not(.activa):not(.reset){
   position: absolute;
   font-size: 8em;
   top: 50%;
-  right: -5%;
+  right: 0;
   z-index: 10;
+  line-height: 0em;
 }
 
 #slide{
   display: block;
   margin: 1em auto;
+  margin-top:0;
   position: relative;
   width: 96vw;
   overflow: hidden;
@@ -262,6 +276,7 @@ li img{
   #slide{
     display: block;
     margin: 0em auto;
+    max-height: 50vh;
   }
   #estado{
     position:absolute;
