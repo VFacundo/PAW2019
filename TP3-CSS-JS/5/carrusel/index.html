@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrusel</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="js/confs.js"></script>
   <script src="js/carrusel.js"></script>
 </head>
@@ -15,16 +16,16 @@
   <section>
     <span>Representacion</span>
     <select id="representacion">
-      <option value="derecha">Slide hacia la derecha</option>
-      <option value="arriba">Slide hacia la arriba</option>
-      <option value="transicion">Transicion difuminada</option>
+      <option value="slideshowDer">Slide hacia la derecha</option>
+      <option value="slideShowTop">Slide hacia la arriba</option>
+      <option value="zoom">Slide zoom</option>
     </select>
     <button onclick="Carrusel.cambiarRepresentacion()">Cambiar</button>
   </section>
   <div id="slide">
 
-    <div id="back"><</div>
-    <div id="next">></div>
+    <div id="back">〈</div>
+    <div id="next">〉</div>
     <div id="contentDot"></div>
   </div>
 </body>

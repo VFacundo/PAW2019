@@ -4,48 +4,30 @@ Carrusel = Carrusel || {};
 
 Carrusel.imagenes = [
   {
-    src: "images/400 (1).jpg"
+    src: "https://picsum.photos/id/1/1920/1080"
   },
   {
-    src: "images/400 (2).jpg"
+    src: "https://picsum.photos/id/16/1920/1080"
   },
   {
-    src: "images/14-600x400.jpg"
+    src: "https://picsum.photos/id/13/1920/1080"
   },
   {
-    src: "images/87-600x400.jpg"
+    src: "https://picsum.photos/id/11/1920/1080"
   },
   {
-    src: "images/140-600x400.jpg"
+    src: "https://picsum.photos/id/10/1920/1080"
   },
   {
-    src: "images/354.jpg"
+    src: "https://picsum.photos/id/21/1920/1080"
   },
   {
-    src: "images/400.jpg"
+    src: "https://picsum.photos/id/41/1920/1080"
   },
   {
-    src: "images/img (1).jpg"
+    src: "https://picsum.photos/id/51/1920/1080"
   },
   {
-    src: "images/img (2).jpg"
-  },
-  {
-    src: "images/img (3).jpg"
-  },
-  {
-    src: "images/img (4).jpg"
-  },
-  {
-    src: "images/img (5).jpg"
-  },
-  {
-    src: "images/img (6).jpg"
-  },
-  {
-    src: "images/img (7).jpg"
-  },
-  {
-    src: "images/img (8).jpg"
+    src: "https://picsum.photos/id/61/1920/1080"
   }
 ];

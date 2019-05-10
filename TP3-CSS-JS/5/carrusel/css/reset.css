@@ -26,7 +26,11 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0em auto;
+	align-content: center;
 }
 body {
 	line-height: 1;
